@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
         lowercase: true,
         trim: true
     },
-    fullname: {
+    fullName: {
         type: String,
         required: true,
         trim: true,
@@ -32,16 +32,15 @@ const userSchema = new mongoose.Schema({
         type: String,  // cloudinary url
         required: true
     },
-    cover: {
+    coverImage: {
         type: String
     },
     watchHistory: [{
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "Video"
     }],
     refToken: {
         type: String,
-        default: []
     }
 }, {timestamps: true})
 
